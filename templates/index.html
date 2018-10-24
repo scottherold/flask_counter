@@ -1,0 +1,35 @@
+<!DOCTTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Counter</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            table {
+                margin: auto;
+                width: 10%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1 class="display-4 text-center">Counter</h1>
+            <hr class="my-4">
+            <h3 class="display-5 text-center">{{ sCount }} {{ time }}</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <form action='/count2' method='post'>
+                                <input class="btn btn-primary btn-lg" type="submit" value="Add Two Visits">
+                            </form>
+                        </td>
+                        <td>
+                            <form action='/destroy_session' method='post'>
+                                <input class="btn btn-primary btn-lg btn-danger" type="submit" value="Reset">
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+    </body>
+</html>
